@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>macshot</title>
+        <link>https://github.com/sw33tLie/macshot</link>
+        <description>macshot updates</description>
+<item xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <title>v4.2.1</title>
+    <pubDate>Fri, 10 Jul 2026 17:51:12 +0000</pubDate>
+    <sparkle:version>99</sparkle:version>
+    <sparkle:shortVersionString>4.2.1</sparkle:shortVersionString>
+    <sparkle:minimumSystemVersion>12.3</sparkle:minimumSystemVersion>
+
+    <description>
+      &lt;style&gt;
+        body { font-family: -apple-system, sans-serif; font-size: 13px; padding: 12px; }
+        h3 { font-size: 14px; margin: 12px 0 6px 0; }
+        h3:first-child { margin-top: 0; }
+        ul { padding-left: 18px; margin: 4px 0; }
+        li { margin: 4px 0; line-height: 1.5; }
+      &lt;/style&gt;
+      &lt;h3&gt;Added&lt;/h3&gt;&lt;ul&gt;  &lt;li&gt;&lt;b&gt;Stamp size control&lt;/b&gt; — a Size slider in the stamp options row sets the default stamp/emoji size (remembered across captures). Stamps keep their aspect ratio when resized from any handle, and resizing an emoji stamp carries that size forward to the next one. (#289)&lt;/li&gt; &lt;li&gt;&lt;b&gt;Measure: "Limit to selection"&lt;/b&gt; — the ruler clamps to the capture area across drag-drawing, auto-measure (hold 1/2), and endpoint handle resizing. On by default; toggle in the measure options row. (#212)&lt;/li&gt; &lt;li&gt;&lt;b&gt;Option = draw-through&lt;/b&gt; — with a drawing tool active, hold Option to draw or place right over existing annotations instead of selecting them.&lt;/li&gt;  &lt;/ul&gt;&lt;h3&gt;Fixed&lt;/h3&gt;&lt;ul&gt;  &lt;li&gt;&lt;b&gt;Multi-monitor capture on macOS 26&lt;/b&gt; — external displays no longer capture shifted upward with a black bar at the bottom. (#291, #294)&lt;/li&gt; &lt;li&gt;&lt;b&gt;Shortcuts bound to Space work again&lt;/b&gt; — actions like Copy on the Space key were swallowed by 4.2.0's hold-Space-to-reposition feature. (#292)&lt;/li&gt; &lt;li&gt;&lt;b&gt;Shortcut names on non-QWERTY layouts&lt;/b&gt; — hotkey display resolves keys through the active keyboard layout, so Dvorak/Colemak/AZERTY users see the keys they actually press. (#214)&lt;/li&gt; &lt;li&gt;&lt;b&gt;Video editor Copy includes pending edits&lt;/b&gt; — trim, cuts, speed, zoom/censor/text, and mute are applied before copying to the clipboard. (#193)&lt;/li&gt; &lt;li&gt;&lt;b&gt;Multi-monitor: restored selection gets keyboard focus&lt;/b&gt; — Cmd+C, F, and Enter act on the display that shows the restored selection. (#281)&lt;/li&gt; &lt;li&gt;Stamp hover preview no longer leaves trails at larger stamp sizes.&lt;/li&gt;&lt;/ul&gt;
+    </description>
+    <enclosure url="https://github.com/sw33tLie/macshot/releases/download/v4.2.1/MacShot.dmg" length="6747619" type="application/octet-stream" sparkle:edSignature="hVBqpp6GDMI7MmpHxkPsr1edooUjddMcqhalz8gKXEM4+tJ36rw0n1wBR/bZECQcIBaGmo2Ijh6zpuDs/h42BA==" />
+</item>
+<item>
+    <title>v4.2.2-beta.2</title>
+    <pubDate>Wed, 12 Aug 2026 15:32:30 +0000</pubDate>
+    <sparkle:version>101</sparkle:version>
+    <sparkle:shortVersionString>4.2.2-beta.2</sparkle:shortVersionString>
+    <sparkle:minimumSystemVersion>12.3</sparkle:minimumSystemVersion>
+    <sparkle:channel>beta</sparkle:channel>
+    <description><![CDATA[
+      <style>
+        body { font-family: -apple-system, sans-serif; font-size: 13px; padding: 12px; }
+        h3 { font-size: 14px; margin: 12px 0 6px 0; }
+        h3:first-child { margin-top: 0; }
+        ul { padding-left: 18px; margin: 4px 0; }
+        li { margin: 4px 0; line-height: 1.5; }
+      </style>
+      <h3>Added</h3><ul>  <li><b>Video text style panel</b> — selected text effects now expose font family, size, bold/italic, text/background colors, background style, glyph outline, and alignment controls with live paused-preview updates. Styles carry forward to new text segments and remain compatible with saved projects. (#307)</li> <li><b>Visible + Effect control</b> — video effects can be added from the toolbar at the playhead, with nearest-gap placement when the requested time is occupied. (#307)</li>  </ul><h3>Changed</h3><ul>  <li><b>WYSIWYG video zoom editing</b> — zoom selections keep the video aspect ratio, remain within valid bounds, and match the region rendered by preview and export. (#301, #307)</li>  </ul><h3>Fixed</h3><ul>  <li>Transient text editors now own and discard their undo history, preventing Cmd+Z crashes after an editor closes.</li> <li>Escape now cancels an in-progress scroll capture instead of finalizing it (#333).</li> <li>Screenshot filename de-duplication can no longer overwrite an existing file after exhausting numbered names or during concurrent saves (#344).</li> <li><b>Video editor timecode rounding</b> — the timeline's tenths-of-a-second digit could read one low (e.g. 2.3s shown as "0:02.2") because it was truncated from a floating-point subtraction instead of rounded. Deriving minutes/seconds/tenths from a single rounded value fixes the digit and the boundary roll-over (1.999s now shows "0:02.0", not "0:01.9").</li> <li>Built-in GIF exports now preserve playback speed for non-divisor frame-rate conversions and account for GIF centisecond delay rounding (#340).</li> <li>MP4 exports now show persistent percentage progress and ignore duplicate Save/Copy actions while processing (#323).</li> <li>Microphone capture now keeps a stable 48 kHz mono format when Bluetooth headsets switch audio profiles, preventing slowed and pitch-shifted recordings (#326).</li></ul>
+    ]]></description>
+    <enclosure
+        url="https://github.com/sw33tLie/macshot/releases/download/v4.2.2-beta.2/MacShot.dmg"
+        length="6850331"
+        type="application/octet-stream"
+        sparkle:edSignature="wnpj9X38xXRD7opeVJU1ecOTLAvxj3TQ0jlrknHOUUhEAvSYPRtXCsndbsu9R/3pEiw0do2iI+8TIP0xGKq5Aw=="
+    />
+</item>
+    </channel>
+</rss>
