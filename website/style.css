@@ -1,11 +1,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--accent:#3D7CFB;--accent2:#211BEF;--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--text:#e4e4ed;--muted:#8888a0;--radius:12px}
+:root{--accent:#2EC4B6;--accent2:#171B1E;--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--text:#e4e4ed;--muted:#8888a0;--radius:12px}
 body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
 /* Glow background */
-.glow{position:fixed;top:-40%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(61,124,251,.08) 0%,transparent 70%);pointer-events:none;z-index:0}
+.glow{position:fixed;top:-40%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(46,196,182,.08) 0%,transparent 70%);pointer-events:none;z-index:0}
 
 /* Layout */
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
@@ -24,7 +24,7 @@ nav .links a:hover{color:#fff;text-decoration:none}
 .btn-primary{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
 .btn-primary:hover{background:rgba(255,255,255,.18);text-decoration:none;transform:translateY(-1px)}
 .btn-accent{background:var(--accent);color:#fff}
-.btn-accent:hover{background:#5090ff;text-decoration:none;transform:translateY(-1px)}
+.btn-accent:hover{background:#54D6C9;text-decoration:none;transform:translateY(-1px)}
 .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}
 .btn-outline:hover{border-color:var(--muted);text-decoration:none}
 .btn-big{padding:14px 32px;font-size:16px;border-radius:10px}
@@ -33,7 +33,7 @@ nav .links a:hover{color:#fff;text-decoration:none}
 .hero{padding-top:140px;text-align:center}
 /* Blue buttons for hero/cta/install (override white nav button) */
 .hero .btn-primary,.cta .btn-primary,.install-card .btn-primary{background:var(--accent);color:#fff}
-.hero .btn-primary:hover,.cta .btn-primary:hover,.install-card .btn-primary:hover{background:#5090ff}
+.hero .btn-primary:hover,.cta .btn-primary:hover,.install-card .btn-primary:hover{background:#54D6C9}
 .hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;background:linear-gradient(135deg,#fff 30%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{font-size:clamp(16px,2.5vw,20px);color:var(--muted);max-width:600px;margin:20px auto 0}
 .hero .actions{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
@@ -48,7 +48,7 @@ nav .links a:hover{color:#fff;text-decoration:none}
 /* Features grid */
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:border-color .3s,transform .3s}
-.feature:hover{border-color:rgba(61,124,251,.3);transform:translateY(-2px)}
+.feature:hover{border-color:rgba(46,196,182,.3);transform:translateY(-2px)}
 .feature .icon{font-size:28px;margin-bottom:12px}
 .feature h3{font-size:17px;font-weight:700;margin-bottom:6px}
 .feature p{font-size:14px;color:var(--muted);line-height:1.5}
@@ -78,7 +78,7 @@ nav .links a:hover{color:#fff;text-decoration:none}
 /* Stats */
 .stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:48px}
 .stat{text-align:center}
-.stat .num{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--accent),#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat .num{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--accent),#FF8B7F);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat .label{font-size:13px;color:var(--muted);margin-top:4px}
 
 /* Shortcuts */
@@ -87,7 +87,7 @@ nav .links a:hover{color:#fff;text-decoration:none}
 .shortcut kbd{background:var(--bg);border:1px solid var(--border);padding:3px 8px;border-radius:5px;font-family:"SF Mono",Menlo,monospace;font-size:12px;color:var(--accent)}
 
 /* CTA */
-.cta{text-align:center;background:linear-gradient(135deg,rgba(33,27,239,.1),rgba(61,124,251,.1));border:1px solid var(--border);border-radius:20px;padding:64px 32px;margin:0 auto;max-width:800px}
+.cta{text-align:center;background:linear-gradient(135deg,rgba(255,107,94,.1),rgba(46,196,182,.1));border:1px solid var(--border);border-radius:20px;padding:64px 32px;margin:0 auto;max-width:800px}
 .cta h2{font-size:28px;font-weight:800;margin-bottom:8px}
 .cta p{color:var(--muted);margin-bottom:24px}
 
@@ -101,13 +101,13 @@ footer .links{display:flex;gap:20px;justify-content:center;margin-top:8px}
 .cmp{max-width:860px;margin:0 auto;overflow-x:auto}
 .cmp table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
 .cmp th,.cmp td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
-.cmp th{font-weight:700;color:#fff;background:rgba(61,124,251,.08)}
+.cmp th{font-weight:700;color:#fff;background:rgba(46,196,182,.08)}
 .cmp td:first-child{color:var(--text);font-weight:500}
 .cmp tr:last-child td{border-bottom:none}
 .cmp .yes{color:#4ade80;font-weight:600}
 .cmp .no{color:#8888a0}
-.cmp .mine{background:rgba(61,124,251,.06)}
-.cmp th.mine{background:rgba(61,124,251,.16)}
+.cmp .mine{background:rgba(46,196,182,.06)}
+.cmp th.mine{background:rgba(46,196,182,.16)}
 
 /* Prose blocks (SEO pages) */
 .prose{max-width:720px;margin:0 auto}
@@ -133,13 +133,13 @@ footer .links{display:flex;gap:20px;justify-content:center;margin-top:8px}
 .page-hero{padding-top:120px;text-align:center}
 .page-hero h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-1px;line-height:1.15}
 .page-hero .btn-primary{background:var(--accent);color:#fff}
-.page-hero .btn-primary:hover{background:#5090ff}
+.page-hero .btn-primary:hover{background:#54D6C9}
 .page-hero .meta{font-size:13px;color:var(--muted)}
 .page-hero .meta span{margin:0 8px}
 
 /* Tag links (Guides on homepage) */
 a.tool-tag{color:var(--text);transition:border-color .2s,color .2s}
-a.tool-tag:hover{text-decoration:none;border-color:rgba(61,124,251,.5);color:#fff}
+a.tool-tag:hover{text-decoration:none;border-color:rgba(46,196,182,.5);color:#fff}
 
 /* Hero screenshot on feature pages sits inside the hero (no inter-section gap) */
 .page-hero{padding-bottom:32px}

@@ -1,37 +1,29 @@
-# Contributing to macshot
+# Contributing to Snaploom
 
-Thanks for your interest in contributing! macshot is open to bug fixes, improvements, and new features.
+Thanks for helping improve Snaploom.
 
-## Before you start
+## Development Setup
 
-- **Bug fixes:** Open a PR directly with a clear description of what's broken and how you fixed it.
-- **New features / large changes:** Open an issue first to discuss the approach. This avoids wasted effort if the feature doesn't fit the project direction.
-- **Small improvements** (UI polish, performance, code cleanup): PRs welcome without prior discussion.
+1. Open `Snaploom.xcodeproj` in Xcode.
+2. Select the `Snaploom` scheme.
+3. Build and run.
+4. Grant Screen Recording permission when prompted.
 
-## Development setup
-
-1. Open `macshot.xcodeproj` in Xcode
-2. Build & Run (Cmd+R)
-3. Grant Screen Recording permission when prompted
-
-The project uses synchronized file groups — just create `.swift` files in `macshot/` and Xcode picks them up.
+The project uses Xcode synchronized file groups, so new Swift files placed in `SnaploomApp/` are discovered automatically.
 
 ## Guidelines
 
-- **Pure AppKit.** No SwiftUI (except `BeautifyRenderer` which requires it for mesh gradients). No Electron, no web views.
-- **No new dependencies** unless absolutely necessary. Prefer Apple frameworks.
-- **Minimum target is macOS 12.3.** Use `@available` guards for newer APIs.
-- **Test on single and multi-monitor setups** if your change touches coordinates, overlays, or screen capture.
-- **Don't add features to the PR beyond what it claims to fix/add.** Keep PRs focused.
-- **Match existing code style.** No SwiftLint, no formatter — just follow what's already there.
+- Prefer AppKit and Apple frameworks over new dependencies.
+- Keep the minimum deployment target at macOS 12.3 unless a change is explicitly discussed.
+- Guard newer APIs with availability checks.
+- Preserve the scoped undo handling described in `AGENTS.md` for editable text views.
+- Test coordinate and capture changes on single- and multi-display setups.
+- Keep pull requests focused and explain both the behavior and the reason for the change.
 
-## PR checklist
+## Verification
 
-- [ ] Builds without warnings
-- [ ] Tested manually (there are no unit tests)
-- [ ] Doesn't break existing behavior
-- [ ] Commit message describes *what* and *why*
+Before opening a pull request:
 
-## Questions?
-
-Open an issue or start a discussion.
+- Build the Debug configuration without code signing.
+- Exercise the changed workflow manually.
+- Check that no credentials, local paths, or personal signing identifiers are committed.

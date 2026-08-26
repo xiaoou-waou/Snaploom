@@ -1,223 +1,84 @@
-# macshot
+# Snaploom
 
 <p align="center">
-  <img src="assets/logo.svg" alt="macshot logo" width="200"/>
+  <img src="assets/logo.svg" alt="Snaploom logo" width="180">
 </p>
 
 <p align="center">
-  <b>The most feature-rich open-source screenshot tool on macOS.</b><br>
-  <br>
-  19+ annotation tools, screen recording with a full video editor, OCR + translation,<br>
-  auto-redact PII, scroll capture, beautify — all native, all free.
+  <strong>Capture, annotate, record, and shape anything on your Mac.</strong>
 </p>
+
+Snaploom is a lightweight, native macOS screenshot and screen-recording tool. It combines fast region capture, editable annotations, scrolling screenshots, OCR, recording, and a built-in video editor in one menu-bar app.
 
 <p align="center">
-  <a href="https://github.com/sw33tLie/macshot/releases/latest">Download</a> · <a href="https://github.com/sw33tLie/macshot/blob/main/CHANGELOG.md">Changelog</a> · <a href="https://github.com/sw33tLie/macshot/blob/main/PRIVACY.md">Privacy</a> · <a href="https://github.com/sw33tLie/macshot/blob/main/SECURITY.md">Security</a>
+  <img src="assets/preview.png" alt="Snaploom screenshot editor" width="760">
 </p>
 
-<p align="center">
-  <img src="assets/preview.png" alt="macshot demo" width="700"/>
-</p>
+## Highlights
 
-<p align="center">
-  <img src="assets/preview-editor.png" alt="macshot video editor — timeline with cut, speed, freeze, zoom and censor effects" width="700"/>
-</p>
-
----
-
-### Why macshot?
-
-- **Capture & annotate in one flow** — select a region, draw arrows/text/shapes/blur, copy to clipboard. One hotkey, zero friction.
-- **Screen recording with built-in editor** — record any area or full screen as MP4/GIF with system audio + microphone. Audio merge dialog with per-track volume control. Trim and export without leaving the app.
-- **Scroll capture** — select a region and scroll. macshot stitches it into one seamless tall (or wide) image automatically.
-- **Upload anywhere** — one-click upload to Google Drive, imgbb, or any S3-compatible service (Cloudflare R2, AWS S3, MinIO, etc.). Link copied to clipboard instantly.
-- **Lightweight & native** — lives in your menu bar. Built with Swift and AppKit, not a web browser in disguise.
-- **40 languages** — English, 中文, 日本語, 한국어, Deutsch, Français, Español, Italiano, Português, العربية, हिन्दी, and 29 more. Auto-detects your system language.
-
----
-
-## Install
-
-**Homebrew:**
-```bash
-brew install --cask macshot
-```
-
-**Manual:** Download the latest `.dmg` from [Releases](https://github.com/sw33tLie/macshot/releases), open it, drag to `/Applications`.
-
----
-
-## Quick Start
-
-1. Launch macshot — it appears in your menu bar
-2. Press `Cmd+Shift+X` to capture
-3. Drag to select, annotate with the toolbar, press `Cmd+C` to copy
-4. Press `Esc` to cancel
-
----
-
-<details>
-<summary><b>All Features</b></summary>
-
-### Capture
-- **Instant capture** — global hotkey freezes your screen, select any region
-- **Window snap** — hover over a window and click to capture it exactly; `Tab` toggles snap, `F` for full screen
-- **Resolution & aspect presets** — set an exact pixel size or lock an aspect ratio (1:1, 4:3, 16:9, 9:16, …) before or after selecting; editable width/height fields
-- **Boundary snap** — selection edges snap to strong color edges (UI lines, window borders) while dragging or resizing; hold `Option` to bypass
-- **Scroll capture** — auto-detects vertical or horizontal scrolling, stitches with Apple Vision, live preview panel beside the capture region
-- **Capture delay** — 3/5/10/30 second countdown before capture, set via menu bar. Escape to cancel.
-- **Multi-monitor** — captures all screens simultaneously; drag a selection across screens for a stitched image
-- **Quick save** — `Cmd+Shift+S` to select and save/copy instantly without annotation. Enter key also saves/copies based on preference.
-- **Quick OCR** — `Cmd+Shift+T` to select and extract text instantly
-
-### Annotation Tools
-- **Arrow** — 5 styles: single, thick/banner, double, open, tail; flip direction toggle; right-click to add anchor points for complex curves
-- **Shapes** — rectangle and ellipse with 3 fill modes (stroke, stroke+fill, fill), corner radius slider
-- **Text** — rich formatting (bold/italic/underline/strikethrough), resizable text box, left/center/right alignment, background fill & outline colors, click to re-edit
-- **Pencil & Marker** — freeform drawing with optional smoothing; smart marker mode snaps to text lines via OCR
-- **Numbered markers** — auto-incrementing (1/I/A/a formats), with optional pointer cone
-- **Stamp / Emoji** — 21 quick emojis, 100+ in categorized picker, or load any image
-- **Censor (Pixelate / Blur / Solid / Erase)** — unified redaction tool with 4 modes: pixelate, Gaussian blur, solid color fill, or smart erase that samples surrounding colors for invisible content removal. Auto-redact PII (emails, phones, credit cards, SSNs, API keys), auto-detect faces and people, or draw in "Text Only" mode to censor just the text in a region
-- **Measure** — pixel ruler with px/pt toggle; hold `1` or `2` for auto-measure
-- **Loupe** — 2x magnifier
-- **Highlight (spotlight)** — drag a region to keep it bright while dimming the rest; adjustable dim strength and solid/dashed border
-- **Color sampler** — eyedropper to pick any color; right-click to copy hex; auto-saves to custom palette slots
-- **Space to reposition** — hold Space while drawing to move the shape without changing its size
-- **Rotation** — rotate shapes via handle, Shift for 90° snaps
-- **Click-to-select** — click any annotation to select it, then edit properties (stroke, style, fill), drag to move, resize via handles, rotate, or delete — all without switching tools
-
-### Screen Recording
-- **MP4 (H.264)** up to 120fps or **GIF** (5/10/15fps)
-- **System audio capture** — toggle on/off, excludes macshot's own sounds
-- **Microphone recording** — record voice narration alongside screen capture (permission requested on first use)
-- **Mouse click highlights** — visual ripple on clicks during recording
-- **Selection border** — visible capture region outline during recording
-- **Menu bar stop button** — stop recording from the menu bar icon (appears even if icon is hidden)
-- **Quick settings popover** — change format, FPS, and post-recording action on the fly without opening Preferences
-- **Video editor** — trim timeline, mute/strip audio, play/pause, save (with Save As), upload, reveal in Finder
-
-### Output & Upload
-- **Formats** — PNG, JPEG, HEIC, WebP, AVIF with quality slider
-- **Google Drive** — sign in once, uploads to a private "macshot" folder
-- **imgbb** — anonymous image hosting with shareable links
-- **S3-compatible** — upload to Cloudflare R2, AWS S3, MinIO, DigitalOcean Spaces, Backblaze B2, etc.
-- **Retina downscale** — optional 1x export for smaller files
-- **sRGB color profile** — optional embedding for cross-display consistency
-
-### Editor Window
-- Standalone resizable window with full annotation tools, beautify preview
-- **Add Capture** — capture additional screen regions and compose them into a single image, drag to reposition
-- **Paste image** — `Cmd+V` drops a clipboard image into the canvas as a draggable layer
-- Crop (with rule-of-thirds grid), flip H/V, zoom 0.1x–8x
-- Top bar with pixel dimensions, zoom dropdown (presets, fit canvas, zoom in/out)
-
-### Beautify
-- macOS window frame with traffic lights, shadow, and gradient background
-- 30 gradient styles including 7 mesh gradients (macOS 15+), adjustable padding/corner radius/shadow
-
-### Image Effects (Adjust)
-- Non-destructive CIFilter adjustments: Brightness, Contrast, Saturation, Sharpness
-- 8 presets: Noir, Mono, Sepia, Chrome, Fade, Instant, Vivid
-- Works independently or combined with Beautify
-- Live preview in the overlay
-
-### Other
-- **OCR & QR** — extract text with Apple Vision (auto-detects all languages on macOS 13+), auto-copy to clipboard, translate to 30+ languages, Google AI Search; also reads QR codes with open/copy/scan actions
-- **Invert colors** — one-click color inversion, apply twice to revert
-- **Background removal** — Apple Vision foreground mask (macOS 14+)
-- **Pin to screen** — floating always-on-top window
-- **Floating thumbnail** — auto-dismiss preview with Copy/Save/Pin/Edit/Upload
-- **Screenshot history with editable annotations** — menu bar submenu + drop-down history panel (`Cmd+Shift+H`). Re-open any capture in the editor with live annotations preserved — edit, then press Done to save back. Drag-and-drop, Quick Look, and right-click actions
-- **QR & barcode detection** — inline Open/Copy actions
-- **Snap alignment guides** — annotations snap to midlines and edges
-- **Liquid Glass theme** (macOS 26 Tahoe) — render toolbars, popovers, and HUDs as Apple's translucent Liquid Glass material
-- **Custom menu bar icon** — use the default, a built-in preset, or any SF Symbol
-- **Auto-updates** via Sparkle
-
-</details>
-
-<details>
-<summary><b>Keyboard Shortcuts</b></summary>
-
-**Global hotkeys** (configurable in Preferences)
-
-| Shortcut | Action |
-|---|---|
-| `Cmd+Shift+X` | Capture Area |
-| `Cmd+Shift+F` | Capture Full Screen |
-| `Cmd+Shift+S` | Quick Capture (instant save) |
-| `Cmd+Shift+T` | Capture OCR (instant text extraction) |
-| `Cmd+Shift+R` | Record Area |
-| `Cmd+Shift+H` | Show History Panel |
-
-**General** (during capture)
-
-| Shortcut | Action |
-|---|---|
-| `Enter` | Confirm (save or copy based on preference) |
-| `Cmd+C` | Copy to clipboard |
-| `Cmd+S` | Save to file |
-| `Cmd+Z` / `Cmd+Shift+Z` | Undo / Redo |
-| `Cmd+0` | Reset zoom to 1x |
-| `Esc` | Cancel / close popover |
-| `Delete` | Remove selected annotation |
-| `Tab` | Toggle window snap mode |
-| `F` | Capture full screen (snap mode) |
-| `Shift` (while drawing) | Constrain to straight lines / perfect shapes |
-| `Space` (while drawing) | Reposition shape without changing size |
-| `Right-click` on line/arrow | Add anchor point for multi-point curves |
-
-**Tool shortcuts** (active after selecting a region — customizable in Preferences > Shortcuts)
-
-| Key | Tool |
-|---|---|
-| `A` | Arrow |
-| `L` | Line |
-| `P` | Pencil |
-| `M` | Marker |
-| `R` | Rectangle |
-| `O` | Ellipse |
-| `T` | Text |
-| `N` | Number |
-| `B` | Censor (Pixelate/Blur) |
-| `H` | Highlight (spotlight) |
-| `I` | Color Sampler |
-| `G` | Stamp / Emoji |
-| `S` | Select & Edit |
-| `E` | Open in Editor |
-
-</details>
-
----
-
-## Permissions
-
-macshot requires **Screen Recording** permission. macOS will prompt you on first capture.
-
----
-
-## Donations
-
-Thanks for thinking about it, but macshot doesn't take donations. I make this in my free time and I'm happy to keep it that way, so there's no "buy me a coffee" or sponsorship link.
-
-If you'd like to help out, starring the repo, reporting bugs, or contributing is more than enough. Thank you! 🙏
-
----
-
-## Star History
-
-<a href="https://www.star-history.com/?type=date&repos=sw33tLie%2Fmacshot">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=sw33tLie/macshot&type=date&theme=dark&legend=top-left&sealed_token=cGABeABxKwRrI6y0MxEhh5y6c6U-TgTzFdPZSYSeaGnRmxDA__Q3haAJBOamrR7OSXNXQk3qnqEQGJ7_GDpbAk1SxIXrrYPN2yjnjUVB3BYhNIPjKFozWsiavKRr7fiNhF7nsyDIQzYNE9K1repNx879MKeBaK5WiFfrGXpoiDchQK6eFqJs2I5NuZXd" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=sw33tLie/macshot&type=date&legend=top-left&sealed_token=cGABeABxKwRrI6y0MxEhh5y6c6U-TgTzFdPZSYSeaGnRmxDA__Q3haAJBOamrR7OSXNXQk3qnqEQGJ7_GDpbAk1SxIXrrYPN2yjnjUVB3BYhNIPjKFozWsiavKRr7fiNhF7nsyDIQzYNE9K1repNx879MKeBaK5WiFfrGXpoiDchQK6eFqJs2I5NuZXd" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=sw33tLie/macshot&type=date&legend=top-left&sealed_token=cGABeABxKwRrI6y0MxEhh5y6c6U-TgTzFdPZSYSeaGnRmxDA__Q3haAJBOamrR7OSXNXQk3qnqEQGJ7_GDpbAk1SxIXrrYPN2yjnjUVB3BYhNIPjKFozWsiavKRr7fiNhF7nsyDIQzYNE9K1repNx879MKeBaK5WiFfrGXpoiDchQK6eFqJs2I5NuZXd" />
- </picture>
-</a>
+- Capture a region, window, full display, previous selection, or scrolling page.
+- Annotate with arrows, shapes, rich text, drawing, markers, measurements, highlights, blur, pixelation, and smart redaction.
+- Record a region or display to MP4 or GIF with system audio, microphone, webcam, mouse-click highlights, and keystroke overlays.
+- Edit recordings with trim, speed, freeze, zoom, text, censor, and audio controls.
+- Extract text and QR codes with Apple Vision; translate on device where supported.
+- Save to disk, copy to the clipboard, pin on screen, or reopen captures with editable annotations.
+- Export PNG, JPEG, HEIC, WebP, and AVIF.
+- Run natively with Swift and AppKit on Apple Silicon and Intel Macs.
+- Use any of the bundled 40 interface languages.
 
 ## Requirements
 
-macOS 12.3 (Monterey) or later.
+- macOS 12.3 Monterey or later
+- Xcode 26 or later to build the current source
+- Screen Recording permission for capture
+- Optional Accessibility and Input Monitoring permissions for scrolling capture and keystroke overlays
+- Optional Microphone and Camera permissions for recording
 
-## License
+## Build
 
-[GPLv3](LICENSE)
+```bash
+git clone https://github.com/xiaoou-waou/Snaploom.git
+cd Snaploom
+xcodebuild \
+  -project Snaploom.xcodeproj \
+  -scheme Snaploom \
+  -configuration Debug \
+  -derivedDataPath build \
+  CODE_SIGNING_ALLOWED=NO \
+  build
+```
+
+The unsigned app is written to `build/Build/Products/Debug/Snaploom.app`. For normal development, open `Snaploom.xcodeproj` in Xcode and choose the `Snaploom` scheme.
+
+## Optional Upload Integrations
+
+- **S3-compatible storage:** configure your endpoint, bucket, region, and credentials in Settings.
+- **imgbb:** supply your own API key in Settings. Snaploom does not ship a shared key.
+- **Google Drive:** disabled until a maintainer supplies a native OAuth client. Add `GoogleOAuthClientID` to `SnaploomApp/Info.plist` and register its reversed client ID as a URL scheme.
+
+Screenshots and recordings stay local unless you explicitly choose an upload action.
+
+## URL Actions
+
+When enabled in Settings, external tools can invoke actions such as:
+
+```bash
+open "snaploom://capture"
+open "snaploom://record"
+open "snaploom://scroll-capture"
+open "snaploom://history"
+```
+
+## Project Status
+
+Snaploom starts at version `0.1.0`. Release downloads and signed automatic updates are not published yet; the source build is the supported installation path for this initial repository version.
+
+## Upstream and License
+
+Snaploom is an independent modified distribution based on [macshot](https://github.com/sw33tLie/macshot), imported from upstream commit `270db084796cec47245c0c5fa5ca21b6d222ea76`. It is not affiliated with or endorsed by the upstream project.
+
+The original project and this modified version are licensed under the [GNU General Public License v3.0](LICENSE). Original copyright and contributor attribution remain intact. See [NOTICE.md](NOTICE.md) and [UPSTREAM_CHANGELOG.md](UPSTREAM_CHANGELOG.md).
+
+## Maintainer
+
+Maintained by [xiaoou](https://github.com/xiaoou-waou). Issues and pull requests are welcome.

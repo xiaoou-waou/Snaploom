@@ -1,55 +1,41 @@
 # Privacy Policy
 
-**Last updated:** March 22, 2026
+Last updated: August 26, 2026
 
 ## Overview
 
-macshot is a free, open-source screenshot and screen recording tool for macOS. It is designed to run entirely on your device. We do not operate any servers, and we do not collect, store, or have access to any of your data.
+Snaploom is a local-first screenshot and screen-recording tool for macOS. The project does not operate an application backend and does not include telemetry, analytics, advertising, or crash-reporting services.
 
-## What macshot does NOT do
+## Data Stored on Your Mac
 
-- **No telemetry or analytics** — macshot does not phone home, track usage, or send any data to us.
-- **No data collection** — we do not collect personal information, usage statistics, crash reports, or any other data.
-- **No server-side storage** — we do not operate any servers. All screenshots, recordings, and settings are stored locally on your Mac.
-- **No access to your uploads** — when you upload to Google Drive, files go directly to your own Google Drive account. We cannot see, access, or download your files. When you upload to imgbb, files go directly to imgbb's servers under their privacy policy.
+Snaploom stores preferences, capture history, temporary export data, and optional service credentials inside its macOS sandbox container:
 
-## Data stored on your device
+`~/Library/Containers/io.github.xiaoouwaou.snaploom/Data/`
 
-macshot stores the following data locally on your Mac:
+Screenshots and recordings are saved only to locations you select. Capture history can be limited or disabled in Settings.
 
-- **Screenshots and recordings** — saved to your chosen folder (default: Pictures).
-- **Screenshot history** — recent captures stored in `~/Library/Application Support/com.sw33tlie.macshot/history/`. You control the history size in Preferences (set to 0 to disable).
-- **Preferences** — settings stored in macOS UserDefaults.
-- **Google Drive OAuth tokens** — if you sign in to Google Drive, authentication tokens are stored in `~/Library/Application Support/com.sw33tlie.macshot/gdrive_tokens.json` with owner-only permissions (0600). Tokens are used solely to upload files to your own Google Drive. You can sign out at any time in Preferences, which deletes the token file.
+## Optional Network Requests
 
-## Third-party services
+Snaploom accesses the network only for features you choose to use:
 
-macshot integrates with the following optional third-party services. Use of these services is entirely opt-in:
+- **Updates:** checks the public Snaploom appcast hosted in this GitHub repository.
+- **Apple or Google translation:** sends recognized text only when the selected translation provider requires a network request. Apple on-device translation can work offline when its language packs are installed.
+- **imgbb:** uploads a selected image using the API key you provide.
+- **Google Drive:** uploads selected files to your Drive when a maintainer-configured OAuth client is present and you sign in.
+- **S3-compatible storage:** uploads selected files to the endpoint and bucket you configure.
 
-### Google Drive
-- **Purpose:** Upload screenshots and recordings to your own Google Drive.
-- **Scope:** `drive.file` — macshot can only access files it created in your Drive. It cannot read, list, or modify any other files in your Drive.
-- **Data sent:** The image or video file you choose to upload, plus a filename.
-- **Authentication:** OAuth 2.0. You sign in via Google's login page in your browser. macshot stores a refresh token locally (see above) to avoid repeated sign-ins.
-- **Revoking access:** You can sign out in macshot Preferences, or revoke access at any time from [Google Account Permissions](https://myaccount.google.com/permissions).
-
-### imgbb
-- **Purpose:** Upload screenshots to imgbb for shareable image links.
-- **Data sent:** The image file you choose to upload.
-- **imgbb's privacy policy:** [https://imgbb.com/privacy](https://imgbb.com/privacy)
-
-### Sparkle (auto-updates)
-- **Purpose:** Check for and install macshot updates.
-- **Data sent:** A request to `https://raw.githubusercontent.com/sw33tLie/macshot/main/appcast.xml` to check for new versions. No personal data is included in the request.
+Third-party services process data under their own terms and privacy policies. Snaploom cannot access files outside the permissions and locations granted by macOS.
 
 ## Permissions
 
-macshot requests **Screen Recording** permission from macOS. This permission is required to capture screenshots and record your screen. macOS controls this permission — you can revoke it at any time in System Settings > Privacy & Security > Screen Recording.
+- Screen Recording: required for screenshots and recordings.
+- Accessibility: optional; used for automated scrolling and some recording overlays.
+- Input Monitoring: optional; used to show keystrokes during recording.
+- Microphone: optional; used for voice recording.
+- Camera: optional; used for the webcam overlay.
 
-## Open source
-
-macshot is fully open source. You can inspect the complete source code at [https://github.com/sw33tLie/macshot](https://github.com/sw33tLie/macshot) to verify these claims.
+Permissions can be revoked at any time in System Settings > Privacy & Security.
 
 ## Contact
 
-If you have questions about this privacy policy, open an issue at [https://github.com/sw33tLie/macshot/issues](https://github.com/sw33tLie/macshot/issues).
+Open a private security report or issue at https://github.com/xiaoou-waou/Snaploom.

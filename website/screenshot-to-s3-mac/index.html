@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Upload Screenshots to S3 on Mac - Your Own Bucket &amp; Link | macshot</title>
+<title>Upload Screenshots to S3 on Mac - Your Own Bucket &amp; Link | Snaploom</title>
 <meta name="description" content="Capture a screenshot and upload it straight to your own S3 bucket (or Cloudflare R2, Backblaze B2, any S3-compatible storage) on Mac, then get a shareable link. Bring your own storage. Free and open source.">
-<meta name="theme-color" content="#211BEF">
-<link rel="canonical" href="https://macshot.io/screenshot-to-s3-mac">
-<meta property="og:title" content="Upload Screenshots to S3 on Mac - macshot">
+<meta name="theme-color" content="#171B1E">
+<link rel="canonical" href="https://xiaoou-waou.github.io/Snaploom/screenshot-to-s3-mac">
+<meta property="og:title" content="Upload Screenshots to S3 on Mac - Snaploom">
 <meta property="og:description" content="Capture and upload screenshots to your own S3, R2, or B2 bucket and get a shareable link. Bring your own storage. Free and open source.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://macshot.io/screenshot-to-s3-mac">
-<meta property="og:image" content="https://macshot.io/preview.png">
+<meta property="og:url" content="https://xiaoou-waou.github.io/Snaploom/screenshot-to-s3-mac">
+<meta property="og:image" content="https://xiaoou-waou.github.io/Snaploom/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -23,7 +23,7 @@
       "name": "How do I upload a screenshot to S3 from my Mac?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "macshot can upload a capture directly to your own S3 bucket. Add your endpoint, bucket, and access keys once, then every screenshot can be sent to S3 and the resulting link copied to your clipboard automatically."
+        "text": "Snaploom can upload a capture directly to your own S3 bucket. Add your endpoint, bucket, and access keys once, then every screenshot can be sent to S3 and the resulting link copied to your clipboard automatically."
       }
     },
     {
@@ -31,7 +31,7 @@
       "name": "Does it work with Cloudflare R2 and Backblaze B2?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. macshot uses the S3-compatible API, so it works with Amazon S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, DigitalOcean Spaces, and any other S3-compatible provider - just point it at the right endpoint."
+        "text": "Yes. Snaploom uses the S3-compatible API, so it works with Amazon S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, DigitalOcean Spaces, and any other S3-compatible provider - just point it at the right endpoint."
       }
     },
     {
@@ -39,15 +39,15 @@
       "name": "Where are my screenshots stored?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In your own bucket. macshot uploads straight to the storage you configure - there's no macshot server in between, no account, and no third-party host holding your images."
+        "text": "In your own bucket. Snaploom uploads straight to the storage you configure - there's no Snaploom server in between, no account, and no third-party host holding your images."
       }
     },
     {
       "@type": "Question",
-      "name": "Is macshot free?",
+      "name": "Is Snaploom free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. macshot is free and open source under the GPLv3 license. You only pay your storage provider, if anything."
+        "text": "Yes. Snaploom is free and open source under the GPLv3 license. You only pay your storage provider, if anything."
       }
     }
   ]
@@ -66,13 +66,13 @@
 
 <nav>
 <div class="wrap">
-<a href="/" class="logo"><img src="/logo.svg" alt="macshot" width="32" height="32">macshot</a>
+<a href="/" class="logo"><img src="/logo.svg" alt="Snaploom" width="32" height="32">Snaploom</a>
 <div class="links">
 <a href="/#features">Features</a>
 <a href="/#install">Install</a>
 <a href="/#shortcuts">Shortcuts</a>
-<a href="https://github.com/sw33tLie/macshot" target="_blank">GitHub</a>
-<a href="https://github.com/sw33tLie/macshot/releases/latest/download/MacShot.dmg" class="btn btn-primary">Download</a>
+<a href="https://github.com/xiaoou-waou/Snaploom" target="_blank">GitHub</a>
+<a href="https://github.com/xiaoou-waou/Snaploom#build" class="btn btn-primary">Build</a>
 </div>
 </div>
 </nav>
@@ -82,11 +82,11 @@
 <h1>Upload screenshots to S3 on Mac</h1>
 <p class="lead">Capture, then send straight to your own bucket - Amazon S3, Cloudflare R2, Backblaze B2, or any S3-compatible storage - and get a shareable link on your clipboard. Your images, your storage, no middleman.</p>
 <div style="text-align:center;margin-top:32px">
-<img src="/assets/screenshot-to-s3-mac.png" alt="macshot's S3-compatible storage settings on macOS - endpoint, region, bucket, access keys, public URL and path prefix for uploading screenshots to your own bucket" width="1000" style="max-width:100%;height:auto;border-radius:16px;box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px var(--border)" loading="lazy">
+<img src="/assets/screenshot-to-s3-mac.png" alt="Snaploom's S3-compatible storage settings on macOS - endpoint, region, bucket, access keys, public URL and path prefix for uploading screenshots to your own bucket" width="1000" style="max-width:100%;height:auto;border-radius:16px;box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px var(--border)" loading="lazy">
 </div>
 <div class="actions" style="display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap">
-<a href="https://github.com/sw33tLie/macshot/releases/latest/download/MacShot.dmg" class="btn btn-primary btn-big">Download for macOS</a>
-<a href="https://github.com/sw33tLie/macshot" class="btn btn-outline btn-big" target="_blank">View on GitHub</a>
+<a href="https://github.com/xiaoou-waou/Snaploom#build" class="btn btn-primary btn-big">Build from Source</a>
+<a href="https://github.com/xiaoou-waou/Snaploom" class="btn btn-outline btn-big" target="_blank">View on GitHub</a>
 </div>
 <p class="meta" style="margin-top:16px">macOS 12.3+ <span>|</span> Apple Silicon &amp; Intel <span>|</span> Free &amp; open source</p>
 </div>
@@ -96,13 +96,13 @@
 <div class="wrap">
 <div class="prose">
 <h2>Bring your own storage</h2>
-<p>Most screenshot tools that offer instant links upload to <em>their</em> servers - behind an account, a subscription, and someone else's retention policy. macshot does the opposite: it uploads directly to a bucket you own, so you control where the files live, how long they stay, and who can reach them.</p>
+<p>Most screenshot tools that offer instant links upload to <em>their</em> servers - behind an account, a subscription, and someone else's retention policy. Snaploom does the opposite: it uploads directly to a bucket you own, so you control where the files live, how long they stay, and who can reach them.</p>
 
 <h2>How it works</h2>
 <ul>
 <li>Add your storage details once in Settings - endpoint, region, bucket, and access keys.</li>
 <li>Capture a screenshot as usual.</li>
-<li>Hit upload - macshot sends it straight to your bucket over the S3 API.</li>
+<li>Hit upload - Snaploom sends it straight to your bucket over the S3 API.</li>
 <li>The public link is copied to your clipboard, ready to paste anywhere.</li>
 </ul>
 
@@ -115,11 +115,11 @@
 <li>Wasabi, MinIO, DigitalOcean Spaces, and other S3-compatible storage</li>
 </ul>
 
-<h2>No account, no macshot server</h2>
-<p>There's no macshot account and no macshot server in the path. Your screenshot goes from your Mac to your bucket and nowhere else. Prefer Google Drive instead? macshot can upload there too.</p>
+<h2>No account, no Snaploom server</h2>
+<p>There's no Snaploom account and no Snaploom server in the path. Your screenshot goes from your Mac to your bucket and nowhere else. Prefer Google Drive instead? Snaploom can upload there too.</p>
 
 <h2>Free, native, and open source</h2>
-<p>macshot is a native Swift and AppKit app, free and open source under the GPLv3 license. The only cost is whatever your storage provider charges - often nothing for personal use on R2 or B2.</p>
+<p>Snaploom is a native Swift and AppKit app, free and open source under the GPLv3 license. The only cost is whatever your storage provider charges - often nothing for personal use on R2 or B2.</p>
 </div>
 </div>
 </section>
@@ -128,10 +128,10 @@
 <div class="wrap">
 <div class="section-label"><h2>Common questions</h2></div>
 <div class="faq">
-<details><summary>How do I upload a screenshot to S3 from my Mac?</summary><p>macshot can upload a capture directly to your own S3 bucket. Add your endpoint, bucket, and access keys once, then every screenshot can be sent to S3 and the resulting link copied to your clipboard automatically.</p></details>
-<details><summary>Does it work with Cloudflare R2 and Backblaze B2?</summary><p>Yes. macshot uses the S3-compatible API, so it works with Amazon S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, DigitalOcean Spaces, and any other S3-compatible provider - just point it at the right endpoint.</p></details>
-<details><summary>Where are my screenshots stored?</summary><p>In your own bucket. macshot uploads straight to the storage you configure - there's no macshot server in between, no account, and no third-party host holding your images.</p></details>
-<details><summary>Is macshot free?</summary><p>Yes. macshot is free and open source under the GPLv3 license. You only pay your storage provider, if anything.</p></details>
+<details><summary>How do I upload a screenshot to S3 from my Mac?</summary><p>Snaploom can upload a capture directly to your own S3 bucket. Add your endpoint, bucket, and access keys once, then every screenshot can be sent to S3 and the resulting link copied to your clipboard automatically.</p></details>
+<details><summary>Does it work with Cloudflare R2 and Backblaze B2?</summary><p>Yes. Snaploom uses the S3-compatible API, so it works with Amazon S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, DigitalOcean Spaces, and any other S3-compatible provider - just point it at the right endpoint.</p></details>
+<details><summary>Where are my screenshots stored?</summary><p>In your own bucket. Snaploom uploads straight to the storage you configure - there's no Snaploom server in between, no account, and no third-party host holding your images.</p></details>
+<details><summary>Is Snaploom free?</summary><p>Yes. Snaploom is free and open source under the GPLv3 license. You only pay your storage provider, if anything.</p></details>
 </div>
 </div>
 </section>
@@ -142,8 +142,8 @@
 <h2>Your screenshots, your bucket</h2>
 <p>Free, native, and open source.</p>
 <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-<a href="https://github.com/sw33tLie/macshot/releases/latest/download/MacShot.dmg" class="btn btn-primary btn-big">Download for macOS</a>
-<a href="https://github.com/sw33tLie/macshot" class="btn btn-outline btn-big" target="_blank">Star on GitHub</a>
+<a href="https://github.com/xiaoou-waou/Snaploom#build" class="btn btn-primary btn-big">Build from Source</a>
+<a href="https://github.com/xiaoou-waou/Snaploom" class="btn btn-outline btn-big" target="_blank">Star on GitHub</a>
 </div>
 </div>
 </div>
@@ -151,12 +151,12 @@
 
 <footer>
 <div class="wrap">
-<p>macshot is free, open-source software licensed under GPLv3.</p>
+<p>Snaploom is free, open-source software licensed under GPLv3.</p>
 <div class="links">
 <a href="/">Home</a>
-<a href="https://github.com/sw33tLie/macshot">GitHub</a>
-<a href="https://github.com/sw33tLie/macshot/blob/main/CHANGELOG.md">Changelog</a>
-<a href="https://github.com/sw33tLie/macshot/blob/main/PRIVACY.md">Privacy</a>
+<a href="https://github.com/xiaoou-waou/Snaploom">GitHub</a>
+<a href="https://github.com/xiaoou-waou/Snaploom/blob/main/CHANGELOG.md">Changelog</a>
+<a href="https://github.com/xiaoou-waou/Snaploom/blob/main/PRIVACY.md">Privacy</a>
 </div>
 </div>
 </footer>

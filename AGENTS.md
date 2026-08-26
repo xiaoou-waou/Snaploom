@@ -1,4 +1,4 @@
-# macshot agent guidance
+# Snaploom agent guidance
 
 ## AppKit text-view undo lifetime
 
