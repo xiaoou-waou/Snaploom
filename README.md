@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Capture, annotate, record, and shape anything on your Mac.</strong>
+  <strong>Capture, annotate, secord, and shape anything on your Mac.</strong>
 </p>
 
 Snaploom is a lightweight, native macOS screenshot and screen-recording tool. It combines fast region capture, editable annotations, scrolling screenshots, OCR, recording, and a built-in video editor in one menu-bar app.
@@ -73,11 +73,7 @@ open "snaploom://history"
 
 Snaploom starts at version `0.1.0`. Release downloads and signed automatic updates are not published yet; the source build is the supported installation path for this initial repository version.
 
-## Upstream and License
 
-Snaploom is an independent modified distribution based on [macshot](https://github.com/sw33tLie/macshot), imported from upstream commit `270db084796cec47245c0c5fa5ca21b6d222ea76`. It is not affiliated with or endorsed by the upstream project.
-
-The original project and this modified version are licensed under the [GNU General Public License v3.0](LICENSE). Original copyright and contributor attribution remain intact. See [NOTICE.md](NOTICE.md) and [UPSTREAM_CHANGELOG.md](UPSTREAM_CHANGELOG.md).
 
 ## Maintainer
 
